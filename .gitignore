@@ -1,3 +1,4 @@
 backend/sendEmail.js
 node_modules/
 backend/addCommittee.js
+.env
