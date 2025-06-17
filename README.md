@@ -1,2 +1,17 @@
-# MyAreaConnect---Community-Info-Sharing-Platform
-A full-stack Node.js web application to help communities share and stay updated on local events, public services, volunteer drives, and government schemes. Built with Express.js, MongoDB, EJS templating, and JavaScript, with Nodemailer integration for notifications.
+# MyAreaConnect – Stay Informed, Stay Involved
+
+MyAreaConnect is a community-driven platform that bridges the information gap by allowing users to post and discover local events like health camps, government schemes, social drives, and volunteer opportunities.
+
+## 🔧 Tech Stack
+- **Node.js & Express.js** – Server-side backend
+- **MongoDB & Mongoose** – Database for storing user and event data
+- **EJS** – Template engine for rendering views
+- **JavaScript** – Client-side scripting
+- **Nodemailer** – Email notifications for new posts
+
+## ✨ Features
+- User login & authentication
+- Post new community events with full details
+- View all upcoming and past events
+- Automated email alerts to users on new posts
+- Categorized events and filtering options
