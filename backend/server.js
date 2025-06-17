@@ -201,7 +201,8 @@ app.post("/post-event", async (req, res) => {
 });
 
 // Start server
-app.listen(3000, () =>
-  console.log("🚀 Server running at http://localhost:3000")
-);
-("684ee3ce3d27704415e92730");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
