@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #e6f7ff, #f0fff0);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: #212529;
+      padding: 20px;
+    }
+
+    .dashboard-card {
+      background-color: #ffffff;
+      border: 1px solid #e3e3e3;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .dashboard-card h1 {
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #0d6efd;
+      /* Bootstrap blue */
+    }
+
+    .dashboard-card .lead {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #495057;
+    }
+
+    .btn-custom {
+      margin: 10px 8px;
+      padding: 12px 24px;
+      font-size: 1.05rem;
+      border-radius: 30px;
+      min-width: 180px;
+    }
+
+    .btn-success {
+      background-color: #198754;
+      border: none;
+    }
+
+    .btn-info {
+      background-color: #0dcaf0;
+      border: none;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-card">
+    <h1>Welcome, <%= email %>!</h1>
+
+    <% if (isCommittee) { %>
+      <p class="lead"><i class="bi bi-star-fill text-success"></i> You are a <strong>Committee Member</strong>.</p>
+      <a href="/post-event?email=<%= email %>" class="btn btn-success btn-custom">
+        <i class="bi bi-plus-circle me-2"></i>Share Community Update
+      </a>
+      <% } else { %>
+        <p class="lead"><i class="bi bi-person-circle text-primary"></i> You are a <strong>Regular User</strong>.</p>
+        <% } %>
+
+          <a href="/events" class="btn btn-info btn-custom">
+            <i class="bi bi-calendar-event me-2"></i>View Community Updates
+          </a>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

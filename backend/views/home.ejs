@@ -1,0 +1,71 @@
+<%- include('partials/header') %>
+
+  <style>
+    .hero {
+      position: relative;
+      background: url('https://img.freepik.com/premium-vector/community-care-icons-team-help-illustration_911078-7846.jpg?semt=ais_hybrid&w=740') no-repeat center center;
+      background-size: cover;
+      color: #100f0a;
+      /* Ensure text is black for contrast */
+      padding: 100px 30px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      /* ✅ White overlay with 70% opacity */
+      z-index: -1;
+      border-radius: 10px;
+    }
+
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #787474;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .btn-custom {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      margin: 10px;
+      border-radius: 50px;
+    }
+  </style>
+
+  <div class="container mt-5">
+    <div class="hero">
+      <h2>Welcome to the MyAreaConnect</h2>
+      <p>MyAreaConnect is your go-to community platform — bridging the information gap and keeping you in the loop.
+        <br>
+        Discover timely updates on local activities, public services, government schemes, and volunteering opportunities
+        — all in one place.
+
+
+        <br>
+        Built to help you stay informed, stay involved, and strengthen community connections.
+      </p>
+      <a href="/login" class="btn btn-primary btn-custom">Login</a>
+      <a href="/signup" class="btn btn-success btn-custom">Signup</a>
+
+
+
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>

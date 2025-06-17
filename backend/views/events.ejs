@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+  <div class="container mt-5">
+    <h2 class="text-center text-primary mb-5" style="font-weight: bold;">
+      📅 Community Updates
+    </h2>
+
+    <% if (events.length===0) { %>
+      <div class="alert alert-warning text-center">
+        <strong>No community updates at the moment.</strong><br>
+        Stay tuned for upcoming announcements, schemes, or opportunities!
+      </div>
+      <% } else { %>
+        <div class="row">
+          <% events.forEach(event=> { %>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow border-0"
+                style="border-radius: 15px; background: linear-gradient(to bottom right, #f0f8ff, #e6f2ff);">
+                <div class="card-body">
+                  <h5 class="card-title text-success mb-3">
+                    <i class="bi bi-calendar-event-fill me-2"></i>
+                    <%= event.name %>
+                  </h5>
+                  <ul class="list-unstyled small" style="color: #333;">
+                    <li><strong class="text-dark">📆 Date:</strong>
+                      <%= event.startDate %> to <%= event.endDate %>
+                    </li>
+                    <li><strong class="text-dark">⏰ Time:</strong>
+                      <%= event.startTime %> - <%= event.endTime %>
+                    </li>
+                    <li><strong class="text-dark">📍 Location:</strong>
+                      <%= event.location %>
+                    </li>
+                    <li><strong class="text-dark">✅ Requirements:</strong>
+                      <%= event.requirements %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+        <% } %>
+  </div>
+
+  <%- include('partials/footer') %>

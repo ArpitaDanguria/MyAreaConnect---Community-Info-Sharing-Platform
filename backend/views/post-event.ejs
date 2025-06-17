@@ -1,0 +1,67 @@
+<%- include('partials/header') %>
+
+  <div class="container mt-5">
+    <div class="card shadow-lg p-4"
+      style="max-width: 650px; margin: auto; border-radius: 15px; background-color: #e9f3fb;">
+
+      <h2 class="mb-4 text-center text-primary">📢 Share Community Update</h2>
+
+      <% if (error) { %>
+        <div class="alert alert-danger">
+          <%= error %>
+        </div>
+        <% } %>
+
+          <form method="POST" action="/post-event">
+            <div class="mb-3">
+              <label class="form-label text-primary">Update Title</label>
+              <input type="text" name="name" class="form-control border-primary" placeholder="Update Title"
+                value="<%= formData?.name || '' %>" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-primary">Location</label>
+              <input type="text" name="location" class="form-control border-primary" placeholder="Location"
+                value="<%= formData?.location || '' %>" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-primary">Requirements</label>
+              <input type="text" name="requirements" class="form-control border-primary" placeholder="Requirements"
+                value="<%= formData?.requirements || '' %>" required>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label text-primary">Start Date</label>
+                <input type="date" name="startDate" class="form-control border-primary"
+                  value="<%= formData?.startDate || '' %>" min="<%= new Date().toISOString().split('T')[0] %>" required>
+              </div>
+              <div class="col">
+                <label class="form-label text-primary">End Date</label>
+                <input type="date" name="endDate" class="form-control border-primary"
+                  value="<%= formData?.endDate || '' %>" min="<%= new Date().toISOString().split('T')[0] %>" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label text-primary">Start Time</label>
+                <input type="time" name="startTime" class="form-control border-primary"
+                  value="<%= formData?.startTime || '' %>" required>
+              </div>
+              <div class="col">
+                <label class="form-label text-primary">End Time</label>
+                <input type="time" name="endTime" class="form-control border-primary"
+                  value="<%= formData?.endTime || '' %>" required>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg mt-2">📤Share</button>
+            </div>
+          </form>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
