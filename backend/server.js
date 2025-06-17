@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const app = express();
 const moment = require("moment");
-const sendEmailToAllUsers = require("./sendEmail");
+const sendEmailToAllUsers = require("./mailer");
 
 app.use(cors());
 app.use(express.json());
