@@ -1,3 +1,4 @@
+require("dotenv").config(); // Load env variables at the top
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -15,7 +16,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // MongoDB Connect
 mongoose
-  .connect("mongodb://localhost:27017/communityPortal", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
