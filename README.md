@@ -14,4 +14,4 @@ MyAreaConnect is a community-driven platform that bridges the information gap by
 - Post new community events with full details
 - View all upcoming and past events
 - Automated email alerts to users on new posts
-- Categorized events and filtering options
+
