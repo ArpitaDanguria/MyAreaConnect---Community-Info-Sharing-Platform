@@ -10,8 +10,8 @@ MyAreaConnect is a community-driven platform that bridges the information gap by
 - **Nodemailer** – Email notifications for new posts
 
 ## ✨ Features
-- User login & authentication
+- User login 
 - Post new community events with full details
-- View all upcoming and past events
+- View all upcoming events
 - Automated email alerts to users on new posts
 
